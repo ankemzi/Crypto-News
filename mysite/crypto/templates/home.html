@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+                <center> <h1 class="display-4">Welcome To The Crypto News Network!</h1></center>
+                <center><p class="lead"> Global Crypto Currency and Block Chain News Updated By The Minute.</p></center>
+        </div>
+    </div>
+
+    <center>
+          <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Refreshing...
+          </button>
+    </center>      
+
+    <ul>   </ul>
+    <ul>
+    <div class= "container">
+        <div class = "row" >
+            {%for x in api.Data%}
+                <div class ="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src={{x.imageurl}} class="card-img-top" alt="x.source">
+                        <div class="card-body">
+                            <h5 class="card-title">{{x.title}}</h5>
+                            <p class="card-text">{{x.body }}</p>
+                            <a href="{{x.url}}" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+                  
+            {%endfor%}
+                </div>
+            </div>
+        
+    
+    </ul>
+
+{% endblock %}
+
+
