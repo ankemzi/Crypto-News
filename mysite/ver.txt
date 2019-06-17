@@ -1,0 +1,20 @@
+2019-06-17T16:31:19.572748+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+2019-06-17T16:31:19.572750+00:00 app[web.1]: self.load_wsgi()
+2019-06-17T16:31:19.572751+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+2019-06-17T16:31:19.572753+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2019-06-17T16:31:19.572754+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2019-06-17T16:31:19.572756+00:00 app[web.1]: self.callable = self.load()
+2019-06-17T16:31:19.572757+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+2019-06-17T16:31:19.572758+00:00 app[web.1]: return self.load_wsgiapp()
+2019-06-17T16:31:19.572760+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+2019-06-17T16:31:19.572761+00:00 app[web.1]: return util.import_app(self.app_uri)
+2019-06-17T16:31:19.572763+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+2019-06-17T16:31:19.572764+00:00 app[web.1]: __import__(module)
+2019-06-17T16:31:19.572766+00:00 app[web.1]: ModuleNotFoundError: No module named 'crypto.wsgi'
+2019-06-17T16:31:19.572838+00:00 app[web.1]: [2019-06-17 16:31:19 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-06-17T16:31:19.600400+00:00 app[web.1]: [2019-06-17 16:31:19 +0000] [4] [INFO] Shutting down: Master
+2019-06-17T16:31:19.600514+00:00 app[web.1]: [2019-06-17 16:31:19 +0000] [4] [INFO] Reason: Worker failed to boot.
+2019-06-17T16:31:19.700132+00:00 heroku[web.1]: Process exited with status 3
+2019-06-17T16:31:20.992964+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=crypto-news-network.herokuapp.com request_id=07ed9a10-a64b-4c93-878b-3fc108ee735a fwd="107.13.120.176" dyno= connect= service= status=503 bytes= protocol=https
+2019-06-17T16:31:23.397224+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=crypto-news-network.herokuapp.com request_id=b6f896bb-1745-4850-8aca-415cc0b91942 fwd="107.13.120.176" dyno= connect= service= status=503 bytes= protocol=https
+2019-06-17T16:31:23.000000+00:00 app[api]: Build succeeded
